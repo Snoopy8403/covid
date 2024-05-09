@@ -1,3 +1,7 @@
+import { initForm } from './form';
 import './styles.css';
 
-console.log('teszt');
+document.addEventListener('DOMContentLoaded', () => {
+        initForm();
+    }
+)
