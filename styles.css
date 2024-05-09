@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #a4c4f7; 
+    --primary-light-color: #e7ecc0;
+    --secondary-color: #005C53;
+    --font-color: #494949;
+    --font-color-light: #e4e6e3;
+}
+
+body {
+    color: var(--font-color);
+}
+
+.header {
+    height: 100px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.search {
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    padding: 5px 15px;
+}
+
+.search > .form-container > form{
+    display: flex;
+    margin: 0;
+    gap: 20px;
+}
+
+.form-item > select {
+    line-height: 20px;
+    border: 1px solid var(--font-color);
+    border-radius: 8px;
+    padding: 5px 16px;
+}
+
+.form-item > label {
+    color: var(--secondary-color);
+}
+
+#country {
+    flex: 3 1 auto;
+}
+#country > select {
+    width: 50%;
+}
+
+button {
+    padding: 5px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: aliceblue;
+    cursor: pointer;
+}
+
