@@ -1,4 +1,4 @@
-import { initForm } from './form';
+import { initForm } from './scripts/form';
 import './styles.css';
 
 document.addEventListener('DOMContentLoaded', () => {
