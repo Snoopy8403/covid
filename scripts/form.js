@@ -1,3 +1,4 @@
+import { addCard } from "./card";
 import { loadCovidData } from "./covid";
 
 
@@ -24,6 +25,7 @@ export const initForm = () => {
         e.preventDefault();
         const country = document.getElementById('country-input').value;
         const covidData =  await loadCovidData(country);
+        addCard(covidData);
         console.log(covidData);
     })
 }
