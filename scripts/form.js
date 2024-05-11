@@ -29,7 +29,7 @@ export const initForm = () => {
         const message = document.getElementById('message');
         cardsContainer.insertAdjacentHTML('afterbegin', '<div id="loading-indicator" class="lds-dual-ring"></div>');
         try {
-            const covidData =  await loadCovidData(country);
+            const covidData =  await loadCovidData(country); 
             let index = displayedCountry.indexOf(country);
             if (index == -1) {
                 displayedCountry.push(country);

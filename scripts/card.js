@@ -3,21 +3,25 @@ import 'zizi-card';
 export const addCard = (covidData) => {
     const cardContainer = document.getElementById('card-container');
     cardContainer.insertAdjacentHTML('afterbegin',`
-        <zizi-card title="${covidData.country}">
+        <zizi-card title="${covidData.cases.country}">
             <div class="card-content">
-                <div>Continent: ${covidData.continent}</div>
-                <div>Location: ${covidData.location}, ${covidData.lat} - ${covidData.long}</div>    
-                <div>Elevation: ${covidData.elevation_in_meters}m, Area: ${covidData.sq_km_area}km²</div>
-                <div>Capital city: ${covidData.capital_city}</div>
-                <div>Abbreviation: ${covidData.abbreviation}</div>
-                <div>Population: ${covidData.population}</div>
-                <div>Life expectary: ${covidData.life_expectancy}</div>
-                <div>Confirmed: ${covidData.confirmed}</div>
-                <div>Deaths: ${covidData.deaths}</div>
-                <div>Isolated: ${covidData.iso}</div>
-                <div>Recovered: ${covidData.recovered}</div>
+                <div>Continent: ${covidData.cases.continent}</div>
+                <div>Location: ${covidData.cases.location}, ${covidData.cases.lat} - ${covidData.cases.long}</div>    
+                <div>Elevation: ${covidData.cases.elevation_in_meters}m, Area: ${covidData.cases.sq_km_area}km²</div>
+                <div>Capital city: ${covidData.cases.capital_city}</div>
+                <div>Abbreviation: ${covidData.cases.abbreviation}</div>
+                <div>Population: ${covidData.cases.population}</div>
+                <div>Life expectary: ${covidData.cases.life_expectancy}</div>
+                <h2>Cases</h2>
+                <div>Confirmed: ${covidData.cases.confirmed}</div>
+                <div>Deaths: ${covidData.cases.deaths}</div>
+                <div>Isolated: ${covidData.cases.iso}</div>
+                <div>Recovered: ${covidData.cases.recovered}</div>
+                <h2>Vaccines</h2>
+                <div>Administered: ${covidData.vaccines.administered}</div>
+                <div>Vaccinated: ${covidData.vaccines.people_vaccinated}</div>
              </div>
-             <div class="card-footer">Last updated: ${covidData.updated}</div>    
+             <div class="card-footer">Last updated: ${covidData.cases.updated}</div>    
         </zizi-card>
     `);
 }
