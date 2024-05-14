@@ -3,7 +3,8 @@ import 'zizi-card';
 export const addCard = (covidData) => {
     const cardContainer = document.getElementById('card-container');
     cardContainer.insertAdjacentHTML('afterbegin',`
-        <zizi-card title="${covidData.cases.country}">
+        <zizi-card title="${covidData.cases.country}" id="zizi-${covidData.cases.country}">
+        <button class="closeBtn" id="btn" name="${covidData.cases.country}">X</button>
             <div class="card-content">
                 <div>Continent: ${covidData.cases.continent}</div>
                 <div>Location: ${covidData.cases.location}, ${covidData.cases.lat} - ${covidData.cases.long}</div>    
@@ -22,6 +23,13 @@ export const addCard = (covidData) => {
                 <div>Vaccinated: ${covidData.vaccines.people_vaccinated}</div>
              </div>
              <div class="card-footer">Last updated: ${covidData.cases.updated}</div>    
-        </zizi-card>
+        </zizi-card>        
     `);
+
+    const gomb = document.getElementById('btn');
+    gomb.addEventListener('click', function() {
+        const selectedDiv = this.getAttribute('name');
+        const divCard = document.getElementById('zizi-' + selectedDiv);
+        divCard.remove();
+      });
 }

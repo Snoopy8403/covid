@@ -69,6 +69,7 @@ button {
 }
 
 zizi-card {
+    position: relative;
     width: 40%;
     animation: fadeIn 1s;
 }
@@ -81,6 +82,17 @@ zizi-card {
     100% {
         opacity: 1;
     }
+}
+
+.closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 5px 8px;
 }
 
 .card-content {
